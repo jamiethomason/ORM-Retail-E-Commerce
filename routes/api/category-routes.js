@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
   // find one category by its `id` value
   // be sure to include its associated Products
-  Post.findOne({
+  Category.findOne({
     where: {
       id: req.params.id
     },
@@ -44,11 +44,7 @@ router.get('/:id', (req, res) => {
 
 router.post('/', (req, res) => {
   // create a new category
-  Comment.create({
-    comment_text: req.body.comment_text,
-    user_id: req.body.user_id,
-    post_id: req.body.post_id
-  })
+  Category.create(req.body)
     .then(categoryData => res.json(categoryData))
     .catch(err => {
       console.log(err);
@@ -77,7 +73,7 @@ router.put('/:id', (req, res) => {
 
 router.delete('/:id', (req, res) => {
   // delete a category by its `id` value
-  Comment.destroy({
+  Category.destroy({
     where: {
       id: req.params.id
     }
