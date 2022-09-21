@@ -3,6 +3,9 @@
 ## Description
 Built the back end for an e-commerce site. Took a working Express.js API and configured it to use Sequelize to interact with a MySQL database.
 
+## Walkthrough Video
+Video is linked here: https://drive.google.com/file/d/1KvN1yYNxdORu1Xrq_hkfy4BcV4pdJhUW/view
+
 ### User Story
 
 ```text
